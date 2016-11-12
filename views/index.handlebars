@@ -1,0 +1,58 @@
+<div class="container">  
+  <div class="jumbotron center-align"> 
+    <img src="/assets/img/burger.png"> 
+    <h1 id ='heading'> Eat-Da-Burger! </h1>
+  </div>
+
+  {{!-- burger list before being eaten --}}
+  <div class="row">
+    <div class="col-md-6">
+    <h1 class="h1">Burger to be Devoured!</h1>
+        <ul>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+          <li>
+              <p class="lead"> {{this.burger_name}} </p>
+                <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                  <input type="hidden" name="devoured" value="true">
+                  <button class="btn btn-default btn-lg" type="submit" id ="dev-btn"> DEVOUR IT </button>
+                </form>
+          </li>
+          {{/unless}}
+        {{/each}}
+        </ul>
+    </div>
+    {{!-- burger list after being eaten --}}
+    <div class="col-md-6">
+    <h1 class="h1">Burger Devoured!</h1>
+        <ul>
+        {{#each burgers}}
+          {{#if this.devoured}}
+          <li>
+            <p class="new">{{this.burger_name}} </p>
+            <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+            <!-- option 2, pass in the id of the cat inside the form - you would access this in the route using req.body.id not req.params.id -->
+            <!-- <input type="hidden" name="id" value="{{this.id}}"> -->
+            <button class="btn btn-default btn-lg" id="del" type="submit">DELETE</button>
+            </form>
+          </li>
+          {{/if}}
+        {{/each}}
+        </ul>
+    </div>
+  </div>
+
+  <div class="col-md-10 col-md-offset-1">
+    <p class="enter"> Enter the burger name and submit. </p>
+
+    {{!-- section to add burgers --}}
+    <form class="create-update-form" action="burgers/create" method="POST">
+
+      <div class="form-group">
+        <textarea class="form-control input-lg" type="text" name="bname" rows="3"> </textarea>
+      </div>
+
+      <button class="btn btn-default btn-lg" id="add" type="submit">Add Burger!</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+
+body{
+  background-image:url("http://www.criarsites.com/wp-content/uploads/2010/07/textura.jpg");
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  color:black;
+}
+#heading{
+  background-color:lightgrey;
+}
+.jumbotron {
+  background-image:url("https://thumbs.dreamstime.com/z/fast-food-seamless-pattern-design-burger-chips-soda-drinks-37377414.jpg");
+  
+  text-align: center;
+  font-size:20px;
+
+}
+#dev-btn{
+  background-color:green;
+   margin-bottom:10px;
+  margin-top:-5px;
+}
+.h1{
+  color:blue;
+  background-color:lightgrey;
+  text-align: center;
+}
+
+#add{
+  background-color:black;
+  color:white;
+}
+.lead{
+  background-color:lightblue;
+  color:black;
+  text-align: center;
+ 
+
+}
+.enter{
+  background-color:black;
+  color:white;
+  text-align: center;
+  margin-top:100px;
+}
+.new{
+  background-color:lightgreen;
+  color:black;
+  text-align: center;
+}
+#del{
+   background-color:orange;
+  color:black;
+  text-align: center;
+  margin-bottom:10px;
+  margin-top:-5px;
+}
