@@ -1,21 +1,21 @@
 {
-  "name": "eat-da-burger",
+  "name": "BurgersSequelize",
   "version": "1.0.0",
-  "description": "Burger logger with MySQL, Node, Express, Handlebars and a homemade ORM!!",
+  "description": "Burger logger with MySQL, Node, Express, Handlebars and sequelize!!",
   "main": "server.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/annieg11/Eat-Da-Burger.git"
+    "url": "git+https://github.com/annieg11/BurgersSequelize.git"
   },
   "author": "annie11",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/annieg11/Eat-Da-Burger/issues"
+    "url": "https://github.com/annieg11/BurgersSequelize/issues"
   },
-  "homepage": "https://github.com/annieg11/Eat-Da-Burger#readme",
+  "homepage": "https://github.com/annieg11/BurgersSequelize#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
@@ -24,6 +24,6 @@
     "msql": "^1.0.3",
     "mysql": "^2.12.0",
     "path": "^0.12.7",
-    "sequelize": "^3.24.8"
+    "sequelize": "^3.25.0"
   }
 }

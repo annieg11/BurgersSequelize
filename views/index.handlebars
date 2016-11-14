@@ -1,7 +1,7 @@
 <div class="container">  
   <div class="jumbotron center-align"> 
     <img src="/assets/img/burger.png"> 
-    <h1 id ='heading'> Eat-Da-Burger! </h1>
+    <h1 id ='heading'> Burgers-Yum-Hum! </h1>
   </div>
 
   {{!-- burger list before being eaten --}}
@@ -13,7 +13,7 @@
           {{#unless this.devoured}}
           <li>
               <p class="lead"> {{this.burger_name}} </p>
-                <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                <form action="burgers/update/{{this.id}}" method="POST">
                   <input type="hidden" name="devoured" value="true">
                   <button class="btn btn-default btn-lg" type="submit" id ="dev-btn"> DEVOUR IT </button>
                 </form>
@@ -30,7 +30,7 @@
           {{#if this.devoured}}
           <li>
             <p class="new">{{this.burger_name}} </p>
-            <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+            <form action="burgers/delete/{{this.id}}" method="DELETE" method="POST">
             <!-- option 2, pass in the id of the cat inside the form - you would access this in the route using req.body.id not req.params.id -->
             <!-- <input type="hidden" name="id" value="{{this.id}}"> -->
             <button class="btn btn-default btn-lg" id="del" type="submit">DELETE</button>
