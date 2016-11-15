@@ -37,7 +37,12 @@ router.post('/burgers/create', function (req, res) {
 // To update burgers on parameter id 
 router.post('/burgers/update/:id', function (req, res) {
    // we are using aquery to find the burger will a selected id.
-  models.burgers.findOne({ where: {id: req.params.id} })
+  models.burgers.findOne({ 
+    where: 
+    {
+      id: req.params.id
+    } 
+  })
   .then(function(id) {
 
   // now update devoured to true
@@ -54,14 +59,16 @@ router.post('/burgers/update/:id', function (req, res) {
 router.delete('/burgers/delete/:id', function (req, res) {
    // we are using aquery to find the burger will a selected id.
   models.burgers.destroy({
-   where: {
+   where: 
+   {
     id: req.params.id
   } 
  })
-    // After the burger is updated to the database, refresh the page
-     res.redirect('/index');
-    })
+    // After the burger is updated to the database, refresh the page .then(function(){
+     .then(function(){
+        res.redirect('/index');
+      })
  
-
+});
 
 module.exports = router;

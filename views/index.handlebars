@@ -30,9 +30,7 @@
           {{#if this.devoured}}
           <li>
             <p class="new">{{this.burger_name}} </p>
-            <form action="burgers/delete/{{this.id}}" method="DELETE" method="POST">
-            <!-- option 2, pass in the id of the cat inside the form - you would access this in the route using req.body.id not req.params.id -->
-            <!-- <input type="hidden" name="id" value="{{this.id}}"> -->
+            <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
             <button class="btn btn-default btn-lg" id="del" type="submit">DELETE</button>
             </form>
           </li>
